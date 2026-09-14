@@ -30,11 +30,7 @@ export default function Header() {
   }, []);
 
   useEffect(() => {
-    if (mobileOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
+    document.body.style.overflow = mobileOpen ? 'hidden' : '';
     return () => {
       document.body.style.overflow = '';
     };
@@ -43,9 +39,9 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200'
-          : 'bg-white/80 backdrop-blur-sm border-b border-transparent'
+        scrolled || mobileOpen
+          ? 'bg-white shadow-sm border-b border-slate-200'
+          : 'bg-white/95 backdrop-blur-sm border-b border-transparent'
       }`}
     >
       <div className="container-tech">
@@ -53,12 +49,12 @@ export default function Header() {
           <Link
             to="/"
             onClick={() => setMobileOpen(false)}
-            className="group flex flex-col"
+            className="group flex min-w-0 flex-col"
           >
-            <span className="text-sm font-bold uppercase tracking-wider text-slate-900 transition-colors group-hover:text-teal-700 sm:text-base">
+            <span className="truncate text-sm font-bold uppercase tracking-wider text-slate-900 transition-colors group-hover:text-teal-700 sm:text-base">
               Tufan Dönmezyürek
             </span>
-            <span className="text-[10px] font-medium uppercase tracking-[0.18em] text-slate-400 sm:text-[11px]">
+            <span className="truncate text-[10px] font-medium uppercase tracking-[0.18em] text-slate-400 sm:text-[11px]">
               Servicetechnik · Gebäudetechnik
             </span>
           </Link>
@@ -83,30 +79,32 @@ export default function Header() {
           </nav>
 
           <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden flex items-center justify-center rounded p-2 text-slate-600 transition-colors hover:text-slate-900"
-            aria-label="Menü"
+            type="button"
+            onClick={() => setMobileOpen((open) => !open)}
+            className="ml-3 flex shrink-0 items-center justify-center rounded p-2 text-slate-700 transition-colors hover:bg-slate-100 hover:text-slate-900 lg:hidden"
+            aria-label={mobileOpen ? 'Menü schließen' : 'Menü öffnen'}
             aria-expanded={mobileOpen}
           >
-            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+            {mobileOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
         </div>
       </div>
 
       {mobileOpen && (
-        <nav className="lg:hidden absolute top-full left-0 right-0 bg-white/98 backdrop-blur-md border-b border-slate-200 shadow-lg animate-slide-down">
-          <div className="container-tech py-4">
-            <div className="flex flex-col gap-1">
+        <nav className="fixed inset-x-0 top-16 bottom-0 z-[60] overflow-y-auto bg-white lg:hidden">
+          <div className="container-tech py-5">
+            <div className="flex flex-col gap-2">
               {navItems.map((item) => (
                 <NavLink
                   key={item.path}
                   to={item.path}
                   end={item.path === '/'}
+                  onClick={() => setMobileOpen(false)}
                   className={({ isActive }) =>
-                    `px-4 py-3 text-sm font-medium rounded transition-colors ${
+                    `block w-full rounded-lg border px-4 py-4 text-base font-semibold transition-colors ${
                       isActive
-                        ? 'text-teal-700 bg-teal-50 border-l-2 border-teal-600'
-                        : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-l-2 border-transparent'
+                        ? 'border-teal-200 bg-teal-50 text-teal-800'
+                        : 'border-transparent bg-white text-slate-700 hover:border-slate-200 hover:bg-slate-50 hover:text-slate-900'
                     }`
                   }
                 >
