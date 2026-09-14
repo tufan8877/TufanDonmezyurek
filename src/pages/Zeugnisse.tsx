@@ -50,7 +50,7 @@ export default function Zeugnisse() {
 
             <div className="order-1 lg:order-2 lg:sticky lg:top-24 lg:self-start">
               <DocumentViewer
-                filePath="/documents/abschlusszeugnis.pdf"
+                filePath="/Abschlusszeugnis.pdf"
                 title="Abschlusszeugnis – Tufan Dönmezyürek"
                 viewLabel="Zeugnis ansehen"
                 openLabel="PDF öffnen"
