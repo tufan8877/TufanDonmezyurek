@@ -79,7 +79,7 @@ export const education: EducationItem[] = [
     period: '2014 – 2015',
   },
   {
-    institution: 'Wiener Mittelschule Röderstraße',
+    institution: 'Wiener Mittelschule Roterdstraße',
     description: 'Mittelschule',
     period: '2009 – 2013',
   },
