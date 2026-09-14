@@ -55,7 +55,7 @@ export default function Header() {
               Tufan Dönmezyürek
             </span>
             <span className="truncate text-[10px] font-medium uppercase tracking-[0.18em] text-slate-400 sm:text-[11px]">
-              Servicetechnik · Gebäudetechnik
+              Technischer Kundendienst · HKLS
             </span>
           </Link>
 
