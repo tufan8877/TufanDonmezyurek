@@ -51,7 +51,7 @@ export default function Lehrabschluss() {
 
             <div className="order-1 lg:order-2 lg:sticky lg:top-24 lg:self-start">
               <DocumentViewer
-                filePath="/documents/lehrabschluss.pdf"
+                filePath="/Lehrabschluss.pdf"
                 title="Lehrabschluss – Tufan Dönmezyürek"
                 viewLabel="Lehrabschluss ansehen"
                 openLabel="PDF öffnen"
