@@ -32,7 +32,7 @@ export const experience: ExperienceItem[] = [
     tasks: [],
   },
   {
-    period: '08/2019 – 06/2021',
+    period: '08/2018 – 06/2021',
     title: 'Kanalinspektion',
     company: 'ASN Abfluss Service GmbH',
     location: 'Wien',
