@@ -8,7 +8,7 @@ export interface ExperienceItem {
 
 export const experience: ExperienceItem[] = [
   {
-    period: '11/2023 – heute',
+    period: '03/2023 – heute',
     title: 'Servicetechniker / Installateur',
     company: 'Latt & Co GmbH',
     location: 'Wien',
