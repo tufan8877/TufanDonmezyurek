@@ -22,8 +22,13 @@ export const certificates: Certificate[] = [
     year: '2023',
     filePath: '/Bosch-Zertifikate-2023.pdf',
   },
+  {
+    manufacturer: 'Wolf',
+    courseName: 'Gas-Brennwert CGB-2 · Regelung BM-2 · Geräteaufbau, Anwendung & Hydraulik · Inbetriebnahme und Wartung',
+    issuer: 'Wolf – Infocenter Wien',
+    year: '2024',
+    filePath: '/Wolf-Zertifikat-2024.pdf',
+  },
 ];
 
-export const certificatePlaceholders: string[] = [
-  'Wolf',
-];
+export const certificatePlaceholders: string[] = [];
