@@ -6,14 +6,18 @@ export interface Certificate {
   filePath: string;
 }
 
-// Um ein Zertifikat hinzuzufügen:
-// 1. PDF-Datei ablegen unter: public/documents/certificates/
-// 2. Eintrag in diesem Array hinzufügen
-// 3. filePath relativ zu /public angeben (z.B. "/documents/certificates/vaillant-wartung.pdf")
-export const certificates: Certificate[] = [];
+// PDF-Dateien liegen im public-Ordner und sind dadurch direkt über /Dateiname.pdf erreichbar.
+export const certificates: Certificate[] = [
+  {
+    manufacturer: 'Vaillant',
+    courseName: 'Vaillant Schulungen & Trainings 2024 (7 Nachweise)',
+    issuer: 'Vaillant Group Austria GmbH',
+    year: '2024',
+    filePath: '/Vaillant-Zertifikate-2024.pdf',
+  },
+];
 
 export const certificatePlaceholders: string[] = [
-  'Vaillant',
   'Junkers / Bosch',
   'Wolf',
 ];
