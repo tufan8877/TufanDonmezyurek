@@ -15,9 +15,15 @@ export const certificates: Certificate[] = [
     year: '2024',
     filePath: '/Vaillant-Zertifikate-2024.pdf',
   },
+  {
+    manufacturer: 'Bosch',
+    courseName: 'Bosch Schulungen 2023 (2 Nachweise)',
+    issuer: 'Robert Bosch AG – Geschäftsbereich Thermotechnik',
+    year: '2023',
+    filePath: '/Bosch-Zertifikate-2023.pdf',
+  },
 ];
 
 export const certificatePlaceholders: string[] = [
-  'Junkers / Bosch',
   'Wolf',
 ];
