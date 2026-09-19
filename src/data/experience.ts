@@ -50,7 +50,7 @@ export const experience: ExperienceItem[] = [
     tasks: [],
   },
   {
-    period: '09/2013 – 11/2013',
+    period: '09/2013 – 09/2014',
     title: 'Elektrohelfer',
     company: 'Alles Sanitär und Elektro GmbH',
     location: 'Wien',
