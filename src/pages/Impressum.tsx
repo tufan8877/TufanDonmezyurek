@@ -8,7 +8,7 @@ export default function Impressum() {
       <section className="bg-slate-50 py-12 sm:py-16">
         <div className="container-narrow space-y-6">
           <div>
-            <p className="section-label">Angaben gemäß § 5 MedienG</p>
+            <p className="section-label">Betreiber der Website</p>
             <div className="mt-4 rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
               <p className="text-base font-semibold text-slate-900">
                 Tufan Dönmezyürek
@@ -20,7 +20,7 @@ export default function Impressum() {
           </div>
 
           <div>
-            <p className="section-label">Kontaktmöglichkeit</p>
+            <p className="section-label">Kontakt</p>
             <div className="mt-4 rounded-lg border border-slate-200 bg-white p-6 shadow-sm space-y-2">
               <p className="text-sm text-slate-600">
                 E-Mail:{' '}
@@ -47,9 +47,8 @@ export default function Impressum() {
             <p className="section-label">Hinweis</p>
             <div className="mt-4 rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
               <p className="text-sm leading-relaxed text-slate-500">
-                Diese Website ist eine persönliche Bewerbungswebsite und dient
-                ausschließlich der Präsentation des beruflichen Profils. Es
-                handelt sich nicht um einen Gewerbebetrieb.
+                Diese Website ist eine private Bewerbungswebsite zur Darstellung
+                meines beruflichen Profils und meiner Qualifikationen.
               </p>
             </div>
           </div>
